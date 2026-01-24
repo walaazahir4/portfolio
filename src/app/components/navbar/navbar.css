@@ -1,0 +1,18 @@
+.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-transparent .nav-link,
+.navbar-transparent .navbar-brand {
+  color: #000;
+}
+
+.navbar-transparent .nav-link:hover {
+border-bottom: 2px solid black;
+}
+
+.changeFont{
+  font-family: 'Comfortaa', sans-serif;
+
+}
+

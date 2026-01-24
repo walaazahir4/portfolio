@@ -1,0 +1,51 @@
+<div class="container my-5">
+  <h2 class="mb-5 text-center fade-in">Contact Us</h2>
+
+  <div class="row gy-4">
+    <div class="col-md-5 fade-in delay-1">
+      <div class="p-4 border rounded shadow-sm">
+        <h4>Contact Information</h4>
+        <p><strong>Phone:</strong> +20 1208571899</p>
+        <p><strong>Email:</strong> walaazahir4@gmail.com</p>
+        <p><strong>Address:</strong> 88 Saqr-Quorish st.-Shiratoon-New Cairo</p>
+        <p><strong>Working Hours:</strong> 9 AM - 5 PM</p>
+        <h5 class="mt-4">Click to chat with me on WhatsApp</h5>
+        <div class="d-flex gap-3 fs-3">
+          <a href="https://wa.me/201208571899" target="_blank" rel="noopener" class="text-decoration-none text-success"
+            aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7 fade-in delay-2">
+      <div class="p-4 border rounded shadow-sm">
+        <h4>Work Request:</h4>
+          <div class="row justify-content-center">
+            <form (ngSubmit)="sendEmail()">
+              <div class="mb-3">
+                <input type="text" [(ngModel)]="name" name="name" placeholder="Your name" required
+                  class="form-control" />
+              </div>
+              <div class="mb-3">
+                <input type="email" [(ngModel)]="email" name="email" placeholder="Youremail@gmail.com" required
+                  class="form-control" />
+              </div>
+              <div class="mb-3">
+                <textarea [(ngModel)]="message" name="message" rows="4" placeholder="Your message..." required
+                  class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning fw-bold px-4 btn-animated"
+                [disabled]="!name || !email || !message">
+                Send
+              </button>
+            </form>
+          </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+<div class="container" style="margin-top: 90px;">
+    <h2 class="mb-5 text-center fw-bold">My Certificates</h2>
+    <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let cert of certs">
+            <div class="cert-border">
+                <div class="cert-card">
+                    <img [src]="cert.img" [alt]="cert.name" class="cert-img" data-bs-toggle="modal"
+                        data-bs-target="#certificateModal" (click)="openImage(cert.img)" />
+                    <div class="cert-info">
+                        <h5>{{ cert.name }}</h5>
+                        <p>Issued by {{ cert.issuer }}</p>
+                        <p class="text-muted">{{ cert.date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-warning mt-4 w-100 d-flex align-items-center justify-content-center gap-2"
+                (click)="goBack()">
+                <i class="bi bi-arrow-left"></i>
+                Back
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0 position-relative">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3 bg-white rounded-circle"
+                data-bs-dismiss="modal" aria-label="Close"> </button>
+            <img [src]="selectedImage" class="img-fluid rounded shadow-lg" alt="Certificate Preview" />
+        </div>
+    </div>
+</div>
