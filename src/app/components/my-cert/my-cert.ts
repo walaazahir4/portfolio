@@ -10,52 +10,62 @@ import { Component } from '@angular/core';
 export class MyCert {
   selectedImage: string = '';
 
-
   certs = [
+    {
+      name: 'Entrepreneur',
+      issuer: 'InnovEgypt',
+      date: 'July 2026',
+      img: '/images/cert6.png',
+    },
+   {
+      name: 'Angular training',
+      issuer: 'Huma-Volve',
+      date: 'January 2026',
+      img: '/images/cert2.jpeg',
+    },
+    {
+      name: 'Angular frontend developer',
+      issuer: 'DEPI',
+      date: 'April 2024',
+      img: '/images/cert1.jpg',
+    },
 
     {
-      name: 'Web design', issuer: 'NTI',
-      date: 'July 2022', img: '/images/cert5.png'
+      name: 'Bussiness English',
+      issuer: 'DEPI',
+      date: 'April 2024',
+      img: '/images/cert3.png',
     },
-
-
-     {
-      name: 'HTML & CSS certification', issuer: 'Maraha Tech',
-      date: 'April 2023', img: '/images/cert4.png'
+    {
+      name: 'HTML & CSS certification',
+      issuer: 'Maraha Tech',
+      date: 'April 2023',
+      img: '/images/cert4.png',
     },
 
 
     {
-      name: 'Angular frontend developer', issuer: 'DEPI',
-      date: 'April 2024', img: '/images/cert1.jpg'
+      name: 'Web design',
+      issuer: 'NTI',
+      date: 'July 2022',
+      img: '/images/cert5.png',
     },
 
 
+ 
     {
-      name: 'Bussiness English', issuer: 'DEPI',
-      date: 'April 2024', img: '/images/cert3.png'
+      name: 'Wainting for next  cert...',
+      issuer: '?',
+      date: '',
+      img: '/images/qm.png',
     },
+  ];
 
+  openImage(img: string) {
+    this.selectedImage = img;
+  }
 
-    {
-      name: 'Angular training', issuer: 'Huma-Volve',
-      date: 'January 2026', img: '/images/cert2.jpeg'
-    },
-
-
-    {
-      name: 'Wainting for next  cert...', issuer: '?',
-      date: '', img: '/images/qm.png'
-    },
-  ]
-
-
-openImage(img: string) {
-  this.selectedImage = img;
-}
-
-goBack(){
-      window.history.back();
-}
-
+  goBack() {
+    window.history.back();
+  }
 }

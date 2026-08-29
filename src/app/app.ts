@@ -9,12 +9,15 @@ import { MiniProj } from './components/mini-proj/mini-proj';
 import { Contacts } from './components/contacts/contacts';
 import { MyCert } from './components/my-cert/my-cert';
 
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, About, Footer, Navbar, Home, Notfound, MiniProj, Contacts, MyCert],
-  templateUrl: './app.html',
+    templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('portfolio');
+
+   
 }

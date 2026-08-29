@@ -12,9 +12,9 @@ export class Home {
 
 
 
-readIt(){
-    alert("Sorry, this project is not ready yet. Please try again later.");
-  }
+// readIt(){
+//     alert("Sorry, this project is not ready yet. Please try again later.");
+//   }
 
   scrollToProjects() {
   const el = document.getElementById('projects');

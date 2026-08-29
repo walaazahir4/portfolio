@@ -9,35 +9,94 @@ import { send } from '@emailjs/browser/es/methods/send/send';
   styleUrl: './contacts.css',
 })
 export class Contacts {
- name = '';
-  email = '';
-  message = '';
+//  name = '';
+//   email = '';
+//   message = '';
+
+// sendEmail() {
+//     if (!this.name || !this.email || !this.message) {
+//       alert('Please fill all fields');
+//       return;
+//     }
+
+//    send(
+//       'service_5zj6e3i',   
+//       'template_3mckuhu', 
+//       {
+//         name: this.name,
+//         email: this.email,
+//         message: this.message,
+//       },
+//       'Isx5II6rnR1vwWNh-'     
+//     )
+//     .then(() => {
+//       alert('Message sent successfully!');
+//       this.name = '';
+//       this.email = '';
+//       this.message = '';
+//     })
+//     .catch((error) => {
+//       console.error('Failed to send message:', error);
+//       alert('Failed to send message, please try again later.');
+//     });
+//   }
+
+
+name = '';
+email = '';
+message = '';
+
+nameTouched = false;
+
+// يتحقق إن الاسم 4 كلمات وحروف فقط
+isNameValid(): boolean {
+  if (!this.name) return false;
+
+  const words = this.name.trim().split(/\s+/);
+  if (words.length !== 4) return false;
+
+  const regex = /^[A-Za-z\u0600-\u06FF]+$/; // عربي + إنجليزي
+  return words.every(word => regex.test(word));
+}
+
+onNameBlur() {
+  this.nameTouched = true;
+}
 
 sendEmail() {
-    if (!this.name || !this.email || !this.message) {
-      alert('Please fill all fields');
-      return;
-    }
+  // لو الاسم غلط نوقف الإرسال بس من غير alert
+  if (!this.isNameValid()) {
+    this.nameTouched = true;
+    return;
+  }
 
-   send(
-      'service_5zj6e3i',   
-      'template_3mckuhu', 
-      {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      },
-      'Isx5II6rnR1vwWNh-'     
-    )
+  if (!this.email || !this.message) {
+    return;
+  }
+
+  send(
+    'service_5zj6e3i',
+    'template_3mckuhu',
+    {
+      name: this.name,
+      email: this.email,
+      message: this.message,
+    },
+    'Isx5II6rnR1vwWNh-'
+  )
     .then(() => {
       alert('Message sent successfully!');
       this.name = '';
       this.email = '';
       this.message = '';
+      this.nameTouched = false;
     })
-    .catch((error) => {
-      console.error('Failed to send message:', error);
+    .catch(() => {
       alert('Failed to send message, please try again later.');
     });
-  }
 }
+
+
+}
+
+

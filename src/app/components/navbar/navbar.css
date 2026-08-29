@@ -1,5 +1,7 @@
+
 .navbar-transparent {
-  background: transparent;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-transparent .nav-link,
@@ -7,12 +9,62 @@
   color: #000;
 }
 
-.navbar-transparent .nav-link:hover {
-border-bottom: 2px solid black;
-}
-
-.changeFont{
+.changeFont {
   font-family: 'Comfortaa', sans-serif;
+}
+
+.specialEdit{
+cursor: pointer;
+border: 1px solid black !important;
+border-radius: 15px !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-transparent .nav-link {
+    position: relative;
+  }
+
+  .navbar-transparent .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+  }
+
+  .navbar-transparent .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .navbar-transparent {
+    background-color: rgb(253, 196, 53);
+  }
+
+  .navbar-collapse {
+    background-color: rgb(253, 196, 53);
+    border-radius: 0 0 16px 16px;
+  }
+
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    color: #000 !important;
+    border-bottom: none !important; 
+  }
 
 }
 
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.10) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}

@@ -8,5 +8,25 @@
     margin-top: 85px;
 }
 
+@media only screen and (max-width: 900px) {
+    .RadiusImg{
+        width: 200px;
+        height: 200px;
+    }
+
+    .resAbout{
+        font-size: 18px;
+    }
+
+    .resabotCaption{
+        font-size: 14px !important;
+        line-height: 20px !important;
+    }
+   
+    .editResButton{
+        margin-bottom: 50px;
+    }
+}
+
 
 
