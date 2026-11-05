@@ -7,6 +7,11 @@
 .navbar-transparent .nav-link,
 .navbar-transparent .navbar-brand {
   color: #000;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.navbar-transparent .navbar-brand:hover {
+  transform: translateY(-1px);
 }
 
 .changeFont {
@@ -43,7 +48,7 @@ border-radius: 15px !important;
 
 @media (max-width: 991.98px) {
   .navbar-transparent {
-    background-color: rgb(253, 196, 53);
+    background-color: rgb(253, 196, 53) !important;
   }
 
   .navbar-collapse {
@@ -52,12 +57,31 @@ border-radius: 15px !important;
   }
 
   .navbar-nav {
-    padding: 1rem 0;
+    gap: 0 !important;
+    padding: 0.5rem 0 1rem;
   }
 
   .nav-link {
     color: #000 !important;
     border-bottom: none !important; 
+  }
+
+  .navbar.navbar-transparent.custom-navbar {
+    padding-block: 0.35rem;
+    background-color: rgba(253, 196, 53, 0.94) !important;
+  }
+
+  .custom-navbar .container {
+    padding-inline: 1rem;
+  }
+
+  .navbar-collapse {
+    margin-inline: -0.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
   }
 
 }

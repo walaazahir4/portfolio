@@ -4,6 +4,17 @@
 
 .editText{
     margin-bottom: 210px;
+    transform: translate(-50%, 40px);
+    font-weight: 400;
+}
+
+.social-icons a {
+    display: inline-flex;
+    transition: transform 180ms ease, color 180ms ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
 }
 
 
@@ -14,14 +25,42 @@
     }
 
     .editText{
-        margin-bottom: 60px;
-        font-size: 9px !important;
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+        margin: 0 auto;
+        padding: 0 1rem 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 0.75rem !important;
     }
 
-    i{
-     font-size: 20px !important;
+    .social-icons {
+        position: relative !important;
+        inset: auto !important;
+        transform: none !important;
+        justify-content: center;
+        gap: 1.25rem !important;
+        width: 100%;
+        margin: -1rem auto 0 !important;
     }
-.editRes{
-    height: 100px !important;
+
+    .social-icons i {
+        font-size: 1.4rem;
+    }
+
+    .editRes {
+        display: block;
+        width: 100%;
+        height: auto !important;
+        max-height: 220px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
+
+@media (max-width: 360px) {
+    .editRes {
+        max-height: 160px;
+    }
 }

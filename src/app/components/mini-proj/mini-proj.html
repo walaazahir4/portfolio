@@ -8,7 +8,7 @@
 
         <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4" *ngFor="let task of tasks">
-                <div class="card h-100 shadow-sm border-0 project-card">
+                <div class="card h-100 shadow-sm project-card motion-enter">
                     <img [src]="task.img" class="card-img-top project-img" alt="Project">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">{{ task.title }}</h5>
@@ -25,7 +25,7 @@
             </div>
         </div>
     </section>
-    <button class="btn btn-warning d-inline-flex align-items-center gap-2 fw-semibold px-4 py-2 shadow-sm"
+    <button class="btn btn-warning d-inline-flex align-items-center gap-2 fw-semibold px-4 py-2 shadow-sm mini-back"
         (click)="goBack()">
         <i class="bi bi-arrow-left"></i>
         Back

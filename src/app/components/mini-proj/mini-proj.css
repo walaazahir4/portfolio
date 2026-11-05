@@ -7,6 +7,18 @@
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
+#projects .row > div:nth-child(2) .project-card {
+  animation-delay: 120ms;
+}
+
+#projects .row > div:nth-child(3) .project-card {
+  animation-delay: 240ms;
+}
+
+#projects .row > div:nth-child(4) .project-card {
+  animation-delay: 360ms;
+}
+
 .project-img {
   height: 200px;      
   width: 100%;
@@ -19,4 +31,32 @@
 
 .btn-warning:hover {
   transform: translateX(-3px);
+}
+
+@media (max-width: 575.98px) {
+  .mini-back {
+    margin: 0 0 1rem 0.75rem;
+  }
+
+  #projects {
+    padding: 5rem 0 2rem !important;
+  }
+
+  #projects h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .project-img {
+    height: clamp(150px, 52vw, 200px);
+  }
+
+  .card-footer {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .card-footer .btn {
+    flex: 1 1 auto;
+  }
 }

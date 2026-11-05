@@ -1,0 +1,22 @@
+ .notfound-content {
+  width: min(100%, 38rem);
+  padding: 1rem;
+}
+
+.notfound-content h1 {
+  font-size: clamp(4rem, 20vw, 6rem);
+}
+
+.notfound-content p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 575.98px) {
+  .notfound-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .notfound-content .btn {
+    min-height: 44px;
+  }
+}

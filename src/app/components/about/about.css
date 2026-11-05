@@ -1,17 +1,32 @@
 .RadiusImg{
-    width: 424px;
-    height: 424px;
+    width: 100%;
+    max-width: 424px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 50%;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.RadiusImg:hover {
+    transform: scale(1.025);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
 }
 
 .setMargin{
     margin-top: 85px;
 }
 
+.resabotCaption {
+    font-size: large;
+    line-height: 36px;
+}
+
 @media only screen and (max-width: 900px) {
     .RadiusImg{
-        width: 200px;
-        height: 200px;
+        width: min(100%, 240px);
+        display: block;
+        margin: 0 auto 1.5rem;
     }
 
     .resAbout{
@@ -19,12 +34,27 @@
     }
 
     .resabotCaption{
-        font-size: 14px !important;
-        line-height: 20px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+        overflow-wrap: anywhere;
     }
    
     .editResButton{
         margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .setMargin {
+        margin-top: 6rem;
+    }
+
+    .resAbout {
+        font-size: 1.2rem;
+    }
+
+    .editResButton {
+        margin-bottom: 1.5rem;
     }
 }
 
